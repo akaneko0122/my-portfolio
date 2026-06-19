@@ -1,0 +1,608 @@
+/* リセット*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: "Noto Sans JP", sans-serif;
+  line-height:1.6;
+  padding-top:70px;
+}
+
+/* 共通 */
+.inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+section{
+  padding:80px 20px;
+}
+
+h2{
+  margin-bottom:40px;
+}
+
+/* オーバーレイ */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0, .5);
+  opacity:0;
+  visibility:hidden;
+  transition: .3s;
+  z-index:998;
+}
+
+.overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* ヘッダー */
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:999;
+  background: rgba(255,255,255, .4);
+  backdrop-filter:blur(5px);
+  border-bottom:1px solid #eee;
+  transition: .3s;
+}
+
+.header.scrolled{
+  background:rgba(255,255,255, .95);
+  box-shadow: 0 2px 6px rgba(0,0,0, .08);
+}
+
+.header .inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:70px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+  color:#4CAF50;
+}
+
+.nav{
+  display:block;
+}
+.nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+.nav.active{
+  display:block;
+}
+
+/* ハンバーガーメニュー */
+.hamburger{
+  display:none;
+  width:40px;
+  height:40px;
+  position:relative;
+  border:none;
+  background:transparent;
+}
+
+.hamburger span{
+  position:absolute;
+  width:100%;
+  height:3px;
+  background:#333;
+  left:0;
+}
+
+.hamburger span:nth-child(1){ top:10px;}
+.hamburger span:nth-child(2){ top:18px;}
+.hamburger span:nth-child(3){ top:26px;}
+
+
+/* ヘッダーナビ */
+
+.nav a{
+  font-size:14px;
+  text-decoration:none;
+  color:#333;
+}
+
+.nav a hover{
+  color:#4CAF50;
+}
+
+
+/* FV */
+.fv{
+  height:80vh;
+  background:url("../sakura_images/clinic.png")no-repeat center/cover;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* 白フィルター */
+.fv::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255, .6);
+}
+
+/* テキストを前に出す */
+.fv{
+  margin-bottom:40px;
+}
+
+.fv-inner{
+  position:relative;
+  padding:20px;
+  z-index:1;
+}
+.fv h2{
+  font-size:38px;
+  font-weight:700;
+  margin-bottom:10px;
+  letter-spacing:1px;
+}
+
+.fv p{
+  margin-bottom:20px;
+}
+
+/* ボタン */
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:#4CAF50;
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
+  box-shadow:0 4px 10px rgba(0,0,0, .1);
+  transition: .3s;
+  margin-top:15px;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  opacity: .8;
+  background:#43a047;
+}
+
+/* ABOUT */
+.about{
+  padding:100px 0;
+}
+.about h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.about-wrap{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;
+}
+
+.about-text{
+  max-width:480px;
+}
+
+.about-text p{
+  line-height:1.9;
+  margin-bottom:15px;
+}
+
+.about-img{
+  flex:1;
+}
+
+.about-img img{
+  width:100%;
+  height:300px;
+  border-radius:10px;
+  object-fit:cover;
+  box-shadow:0 5px 15px rgba(0,0,0, .1);
+}
+
+/* 診療内容 */
+.service{
+  padding:80px 0;
+  background:#f9f9f9;
+}
+
+.service h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+/* 横並び */
+.service-list{
+  display:flex;
+  gap:30px;
+}
+
+/* カード */
+.service-card{
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  flex:1;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0, .1);
+}
+
+/* タイトル */
+.service-card h3{
+  margin-bottom:15px;
+  color:#555;
+}
+
+/* ホバー */
+.service-card:hover{
+  transform:translateY(-5px);
+  transition: .3s;
+}
+
+/* 特徴 */
+.feature{
+  padding:80px 0;
+}
+
+.feature h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+/* 横並び */
+.feature-list{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* 各項目 */
+.feature-item{
+  border-top:3px solid#4CAF50;
+  text-align:center;
+  padding:20px;
+  transition: .3s;
+  width:calc(50% - 15px);
+  flex:0 0 calc(50% - 15px);
+  box-sizing:border-box;
+}
+
+.feature-item:hover{
+  transform:translateY(-5px);
+}
+
+/* タイトル */
+.feature-item h3{
+  margin-bottom:10px;
+  color:#4CAF50;
+  font-size:18px;
+  font-weight:600;
+}
+
+/* 説明 */
+.feature-item p{
+  font-size:14px;
+  color:#555;
+}
+
+.feature-item:nth-child(4){
+  background:#f1f8f4;
+  border-radius:10px;
+}
+
+/* お知らせ */
+.news{
+  background:#f9f9f9;
+}
+
+.news-list{
+  list-style:none;
+  padding:0;
+}
+
+.news-list li{
+  display:flex;
+  gap:20px;
+  padding:15px 0;
+  border-bottom:1px solid #ddd;
+}
+
+.news-list .date{
+  color:#4CAF50;
+  font-weight:bold;
+  min-width:120px;
+}
+
+.news-list .text{
+  color:#333;
+}
+
+/* アクセス */
+.access{
+  padding:80px 0;
+  background:#f9f9f9;
+}
+
+.access h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+/* 横並び */
+.access-wrap{
+  display:flex;
+  gap:40px;
+}
+
+/* 地図 */
+.access-map{
+  flex:1;
+}
+.access-map iframe{
+  border-radius:10px;
+}
+
+/* 情報 */
+.access-info{
+  flex:1;
+}
+.access-info strong{
+  color:#4CAF50;
+}
+/* 表 */
+.time-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+  overflow:hidden;
+  border-radius:10px;
+}
+
+.time-table th,
+.time-table td{
+  border:1px solid #ddd;
+  padding:8px;
+  text-align:center;
+}
+
+.time-table th{
+  background:#4CAF50;
+  color:#fff;
+}
+
+.time-table tr:hover{
+  background:#f1f8f4;
+}
+
+/* お問い合わせ */
+.contact{
+  padding:80px 20px;
+  background:#f1f8f4;
+  text-align:center;
+}
+
+.contact-text{
+  margin-bottom:40px;
+  color:#555;
+}
+
+/* 横並び */
+.contact-wrap{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+}
+
+/* カード */
+.contact-item{
+  background:#f9f9f9;
+  padding:30px;
+  border-radius:10px;
+  width:300px;
+  box-shadow:0 8px 20px rgba(0,0,0, .1);
+}
+.contact h2{
+  margin-bottom:20px;
+}
+.contact-item p{
+  margin-bottom:10px;
+}
+.contact-item:hover{
+  transform:translateY(-5px);
+  transition: .3s;
+}
+/* 電話 */
+.tel{
+  font-size:24px;
+  font-weight:bold;
+  color:#4CAF50;
+  margin:15px 0;
+  text-decoration:none;
+}
+
+.footer{
+  background:#2e7d32;
+  color:#fff;
+  padding:40px 20px;
+  border-top:4px solid #4CAF50;
+}
+
+footer p{
+  line-height:1.8;
+}
+
+.footer .inner{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-info h3{
+  margin-bottom:10px;
+}
+
+.footer-nav{
+  list-style:none;
+}
+
+.footer-nav li{
+  margin-bottom:12px;
+}
+
+.footer-nav a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.footer-nav a:hover{
+  opacity: .7;
+}
+
+.copyright{
+  text-align:center;
+  margin-top:30px;
+  font-size:14px;
+}
+
+.to-top{
+  position:fixed;
+  right:20px;
+  bottom:15px;
+  background:#4CAF50;
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  width:45px;
+  height:45px;
+  font-size:20px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width:768px){
+  section{
+    padding:60px 15px;
+  }
+
+   /* ハンバーガーメニュー */
+  .hamburger{
+    position:absolute;
+    top:15px;
+    right:20px;
+    display:block;
+    z-index:200;
+  }
+  
+  .hamburger.active span:nth-child(1){
+    transform: rotate(45deg);
+    top:18px;
+  }
+
+  .hamburger.active span:nth-child(2){
+    opacity:0;
+  }
+
+  .hamburger.active span:nth-child(3){
+    transform: rotate(-45deg);
+    top:18px;
+  }
+
+  .nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:white;
+    z-index:100;
+  }
+
+  .nav a{
+    padding:15px 0;
+  }
+
+  .nav.active{
+    display:block;
+  }
+
+  .nav ul{
+    flex-direction:column;
+    padding:20px;
+    gap:20px;
+  }
+
+ 
+  .fv h1{
+    font-size: clamp(22px, 5vw, 30px);
+    margin-bottom:12px;
+    line-height:1.4;
+  }
+  /* about */
+  .about .inner{
+    flex-direction:column;
+    margin-bottom:24px;
+  }
+
+  /* 診療内容 */
+  .service-list{
+    flex-direction:column;
+  }
+
+  /* 特徴 */
+  .feature-item{
+    width:100%;
+    margin-bottom:20px;
+  }
+  
+  /* お知らせ */
+  .news-list li{
+    flex-direction:column;
+    gap:5px;
+  }
+
+  /* アクセス */
+  .access .inner{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .access-wrap{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  /* お問い合わせ */
+  .contact-list{
+    flex-direction:column;
+  }
+  .tel{
+    word-break:keep-all;
+  }
+
+  /* フッター */
+  .footer .inner{
+    flex-direction:column;
+    text-align:center;
+  }
+}

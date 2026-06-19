@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整形外科クリニック</title>
+    <link rel="stylesheet" href="./css/sakura_style.css">
+  </head>
+  <!-- リセットCSS -->
+   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <body>
+
+    <!--ヘッダー-->
+    <header class="header">
+      <div class="inner">
+        <h1 class="logo">さくら整形外科クリニック</h1>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">クリニック紹介</a></li>
+            <li><a href="#service">診療内容</a></li>
+            <li><a href="#feature">特徴</a></li>
+            <li><a href="#news">お知らせ</a></li>
+            <li><a href="#access">アクセス</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+       <btn class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+       </btn>
+    </header>
+
+    <!-- FV -->
+     <section class="fv">
+      <div class="fv-inner">
+        <h1>地域密着の安心できる医療</h1>
+        <p>〇〇市で地域の皆さまの健康を支えています</p>
+        <a href="#contact" class="btn">WEB予約はこちら</a>
+      </div>
+     </section>
+
+    <!-- About -->
+      <section id="about" class="about">
+        <div class="inner about-wrap">
+
+          <div class="about-text">
+          <h2>クリニック紹介</h2>
+          <p>地域の皆さまに寄り添い、安心して通えるクリニックを目指しています。<br>
+             丁寧な説明と適切な治療で、健康をサポートします。
+          </p>
+        </div>
+
+        <div class="about-img">
+          <img src="sakura_images/about.jpg" alt="院内の様子">
+        </div>
+      </section>
+    
+    <!-- 診療内容 -->
+     <section id="service" class="service">
+      <div class="inner">
+        <h2>診療内容</h2>
+
+        <div class="service-list">
+
+          <div class="service-card">
+            <h3>整形外科</h3>
+            <p>骨・関節・筋肉の痛みやケガに対応します。</p>
+          </div>
+
+          <div class="service-card">
+            <h3>リハビリ</h3>
+            <p>専門スタッフが回復をサポートします。</p>
+          </div>
+
+          <div class="service-card">
+            <h3>骨粗鬆症</h3>
+            <p>骨密度検査と治療に力を入れています。</p>
+          </div>
+
+        </div>
+      </div>
+     </section>
+     <section id="feature" class="feature">
+      <div class="inner">
+        <h2>当院の特徴</h2>
+
+        <div class="feature-list">
+
+          <div class="feature-item">
+            <h3>丁寧な説明</h3>
+            <p>患者さま一人ひとりに寄り添い、分かりやすい説明を心がけています。</p>
+          </div>
+
+          <div class="feature-item">
+            <h3>地域密着</h3>
+            <p>地域の皆さまに信頼される、身近で安心できる医療を提供します。</p>
+          </div>
+          <div class="feature-item">
+            <h3>骨粗鬆症に特化</h3>
+            <p>専門的な検査と治療で、早期発見・予防に力を入れています。</p>
+          </div>
+          <div class="feature-item">
+            <h3>MRI</h3>
+            <p>高精度なMRIを完備し、原因を正確に把握。<br>
+              患者さまに最適な治療をご提供します。
+            </p>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <section id="news" class="news">
+      <div class="inner">
+        <h2>お知らせ</h2>
+
+        <ul class="news-list">
+          <li>
+            <span class="date">2026.04.01</span>
+            <span class="text">開院のお知らせ</span>
+          </li>
+          <li>
+            <span class="date">2026.04.05</span>
+            <span class="text">GWの休診日について</span>
+          </li>
+          <li>
+            <span class="date">2026/04.10</span>
+            <span class="text">新しい検査機器を導入しました</span>
+          </li>
+        </ul>
+
+      </div>
+     </section>
+     <section id="access" class="access">
+      <div class="inner">
+        <h2>アクセス</h2>
+        <div class="access-wrap">
+
+          <!-- 左：地図 -->
+           <div class="access-wrap">
+            <iframe
+            src="https://www.google.com/maps?q=東京駅&output=embed"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+           </div>
+
+          <!-- 右：情報 -->
+          <div class="access-info">
+            <p><strong>住所：</strong>〇〇市〇〇町1-2-3</p>
+            <p><strong>TEL：</strong>０００－００００－００００</p>
+            <p><strong>最寄駅</strong>〇〇駅　徒歩５分</p>
+
+            <table class="time-table">
+              <tr>
+                <th>診療時間</th>
+                <th>月</th><th>火</th><th>水</th>
+                <th>木</th><th>金</th><th>土</th><th>日</th>
+              </tr>
+              <tr>
+                <td>9:00~12:00</td>
+                <td>〇</td><td>〇</td><td>〇</td>
+                <td>〇</td><td>〇</td><td>〇</td><td>×</td>
+              </tr>
+              <td>13:30~17:30</td>
+              <td>〇</td><td>〇</td><td>×</td><td>〇</td>
+              <td>〇</td><td>×</td><td>×</td>
+            </table>
+          </div>  
+        </div>
+      </div>
+     </section>
+     <section id="contact" class="contact">
+      <div class="inner">
+
+        <h2>お問い合わせ</h2>
+        <p class="contact-text">
+          ご予約・ご相談はお電話またはWEBフォームからお気軽にお問合せください。
+        </p>
+
+        <div class="contact-wrap">
+
+         <!-- 電話 -->
+          <div class="contact-item">
+            <h3>お電話でのお問い合わせ</h3>
+            <a href="tel:00000000000" class="tel">000-0000-0000</a>
+            <p>受付時間：9:00~17:30（日曜休診）</p>
+          </div>
+
+          <!-- WEB -->
+           <div class="contact-item">
+            <h3>WEB予約</h3>
+            <p>24時間受付可能です。</p>
+            <a href="#" class="btn">WEB予約はこちら</a>
+           </div>
+
+        </div>
+      </div>
+     </section>
+
+     <footer class="footer">
+      <div class="inner">
+
+        <div class="footer-info">
+          <h3>さくら整形外科クリニック</h3>
+          <p>〒０００－００００ 〇〇市〇〇町１－２－３</p>
+          <p>TEL:000-0000-0000</p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#about">クリニック紹介</a></li>
+          <li><a href="#service">診療内容</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+        <p class="copyright">
+          © 2026 Sakura Orthopedic Clinic
+        </p>
+     </footer>
+
+      <!-- TOPボタン -->
+      <button class="to-top">↑</button>
+
+      <!-- オーバーレイ -->
+        <div class="overlay"></div>
+
+     <!--Javascript-->
+     <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+      const overlay = document.querySelector(".overlay");
+      const navLinks = document.querySelectorAll(".nav a");
+
+    if (hamburger && nav && overlay){
+      hamburger.addEventListener("click" , () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+        
+       });
+      }
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
+      
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector(".header");
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+      });
+
+      const toTopBtn = document.querySelector(".to-top");
+
+      toTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth" 
+        });
+      });
+     </script>
+
+  </body>
+</html>
