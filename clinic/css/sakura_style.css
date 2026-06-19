@@ -582,19 +582,29 @@ footer p{
   }
 
   /* アクセス */
-  .access .inner{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-  }
+  
   .access-wrap{
     flex-direction:column;
     gap:20px;
   }
 
+  /* 診療時間表 */
+  .access-info{
+    overflow-x:auto;
+  }
+
+.time-table{
+  min-width:500px;
+}
+
   /* お問い合わせ */
-  .contact-list{
+  .contact-wrap{
     flex-direction:column;
+    align-items:center; 
+  }
+  .contact-item{
+    width:100%;
+    max-width:300px;
   }
   .tel{
     word-break:keep-all;

@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
-  <body>
+  <body id="top">
 
   <header class="header">
   <div class="header-inner">
 
     <h1 class="logo">
-      <a href="#">WebStudio</a>
+      <a href="#top">WebStudio</a>
     </h1>
 
    <!--ナビゲーション-->
@@ -160,7 +160,12 @@
           <li><a href="#top">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#service">Service</a></li>
+
+          <!--コメントアウトする
+
           <li><a href="#works">Works</a></li>
+          -->
+
           <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -174,7 +179,7 @@
         <a href="#">I</a>
       </div>
   </footer>
-  <a href="#" class="to-top">↑</a>
+  <a href="#top" class="to-top">↑</a>
   <script>
     window.addEventListener("scroll",function(){
       const header = document.querySelector("header");
