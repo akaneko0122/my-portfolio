@@ -158,25 +158,44 @@ a {
 }
 
 /* アクセス */
+
+.page-access{
+    max-width:1200px;
+    margin:0 auto;
+    padding:80px 20px;;
+}
+.access-container{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
 .access {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 140px;
-    padding: 0 1.5rem;
+    width:100%; 
+    max-width:100%;
+    margin:auto;
     border-spacing: 0;
 }
+table.access{
+    width:90%;
+    display:table;
+    margin:0 auto;
+}
+
 .access th,
 .access td {
      border-bottom: 1px solid #c9c2bc;
+     padding: 1rem 0;
+
+     /*
+     white-space:normal;  */
 }
 .access th {
      text-align: left;
      font-weight: normal;
      padding:1rem;
+     white-space:nowrap;
 }
-.access td {
-     padding: 1rem 0;
-}
+
 /* iframe */
 .location-map {
     flex: 1.5;
@@ -306,28 +325,7 @@ a {
         list-style: none;
     } 
 }
-
-    /* Access */
-.page-access {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 120px;
-}    
-.access-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}  
-.access {
-    flex: 1;
-}
-.location-map {
-    flex: 1.5;
-}
-.location-map iframe {
-    width: 100%;
-    height: 400px;
-}
+ 
 
 /* SNSセクション */
 @media (max-width: 768px) {
@@ -459,7 +457,21 @@ a {
     gap: 4rem;
   }
   .access {
-    flex: 1;
+    flex:1;
+  }
+  /*
+  .access th,
+  .access td{
+    display:block;
+    width:100%;
+    white-space:nowrap;
+  }
+*/
+  .page-access{
+    padding:120px 80px;
+  }
+  .access th{
+    padding-bottom: .3rem;
   }
   .location-map {
      flex: 1.5;
